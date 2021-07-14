@@ -1,0 +1,236 @@
+/* common css  */
+:root{
+    --primary-color: #2D25A0;
+    --btn-color: #E02C6D;
+    --heading-color: #18191F;
+    --text-color: #6C6C6C;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    display: flex;
+    width: 1140px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-content{
+    width: 50%;
+}
+.btn{
+    padding: 10px 24px;
+    background-color: var(--btn-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+}
+.btn i.fa-arrow-right{
+    margin-left: 5px;
+    transition: all 0.4s ease-out;
+}
+.btn:hover i.fa-arrow-right{
+    margin-left: 10px;
+}
+
+/* banner start */
+#banner{
+    background-color: var(--primary-color);
+    padding: 100px 0;
+}
+.banner-left h2{
+    font-size: 64px;
+    line-height: 80px;
+    color: #fff;
+    font-weight: 700;
+}
+.banner-left h2 span{
+    display: block;
+}
+.banner-right{
+    text-align: right;
+}
+.banner-right img{
+    width: 80%;
+    animation: mymove 5s infinite;
+}
+@keyframes mymove {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(20px);}
+  }
+/* banner end */
+
+/* players start */
+#player{
+    padding: 50px 0;
+}
+.grid-container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+}
+.player{
+    padding: 15px 15px 33px;
+    background-color: #fff;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+.player-img img{
+    width: 100%;
+}
+.player-content h2{
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: 16px;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.player-content p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/* players end */
+
+/* team-logo start */
+#teamlogo{
+    padding: 50px 0 100px;
+}
+#teamlogo img{
+    max-height: 80px;
+    width: auto;
+    transition: transform 0.4s;
+}
+#teamlogo img:hover{
+    transform: translateY(-10px);
+}
+/* team-logo end */
+
+/* about start */
+#about{
+    background-color: var(--primary-color);
+    padding: 60px 0;
+}
+.about-left img{
+    width: 90%;
+}
+.about-right h2{
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.about-right p{
+    color: #dddddd;
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+.about-right p+p{
+    margin-bottom: 50px;
+}
+/* about end */
+
+/* footer start */
+footer{
+    padding: 60px 0 40px;
+}
+.footer-content{
+    text-align: center;
+}
+.footer-logo img{
+    width: 400px;
+}
+
+.social a i{
+    height: 32px;
+    width: 32px;
+    background-color: #E7E7E8;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    color: #969BAB;
+    margin-right: 10px;
+}
+.copyright{
+    font-size: 18px;
+    line-height: 24px;
+    color: #000;
+}
+/* footer end */
+
+/* Responsive Design  */
+
+/* Extra small devices */
+@media (max-width: 767.98px) {
+    .container, .grid-container{
+        width: 350px;
+    }
+    .container{
+        display: block;
+    }
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #banner{
+        padding: 50px 0;
+    }
+    .left-content{
+        width: 100%;
+    }
+    .banner-left h2{
+        font-size: 36px;
+        line-height: 50px;
+    }
+    .banner-right img{
+        width: 100%;
+        margin-top: 60px;
+    }
+    #teamlogo {
+        padding: 30px 0 40px;
+    }
+    #teamlogo .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    #teamlogo img{
+        max-height: 50px;
+    }
+    .footer-logo img {
+        width: 300px;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    
+    .container, .grid-container{
+        width: 700px;
+    }
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .banner-left h2{
+        font-size: 35px;
+        line-height: 55px;
+    }
+}
